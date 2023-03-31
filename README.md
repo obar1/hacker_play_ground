@@ -1,15 +1,33 @@
-# pyproject-template
+# readme
 
-[![Makefile CI](https://github.com/obar1/pyproject-template/actions/workflows/makefile.yml/badge.svg)](https://github.com/obar1/pyproject-template/actions/workflows/makefile.yml)
+> WIP
 
-simple pyproject template with some factories
-
-> check
+some snippet you can just run from main .py
+```bash
+python _tic_tac_toe.py
 ```
-$ ls -1 *.*p*
 
-demo_api_from_notebook.ipynb
-demo_from_cli.py
-run_api.py
+some others use a file for input/output
+
+```bash
+
+run_py () {
+    echo "running #1 is $1 with ..."
+    cat inputs.txt
+
+    export OUTPUT_PATH='./tmp.txt'
+    cat inputs.txt | python ./"$1"
+    cat $OUTPUT_PATH
+}
+
+// opt - put in script and source it
 
 ```
+
+and
+
+```
+run_py _big_sum.py
+```
+
+SORRY!
